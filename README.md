@@ -1,4 +1,4 @@
-# Skillex Backend Task
+# Combination Generator
 
 ## Project Overview
 This project is a Node.js API using MySQL that generates valid combinations of items based on a given rule. The combinations are stored in a MySQL database and returned in the response.
@@ -40,13 +40,15 @@ This project is a Node.js API using MySQL that generates valid combinations of i
    POST http://localhost:3000/api/generate
 
    Example body:
+   ```
    {
      "items": ["A1", "B1", "C1", "A2"],
      "length": 2
    }
 
 ## Project Structure
-/backend-task-skillex
+```
+combination-generator-api
 ├── controllers
 │   └── generateController.js
 ├── db
@@ -60,7 +62,7 @@ This project is a Node.js API using MySQL that generates valid combinations of i
 ├── server.js
 ├── package.json
 └── schema.sql
-
+```
 ## Notes
 - Make sure MySQL is running.
 - Insertions into the database use transactions for consistency.

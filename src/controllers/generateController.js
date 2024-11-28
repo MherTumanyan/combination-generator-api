@@ -1,4 +1,4 @@
-const { insertItemsAndCombinationsAndResponse } = require('../db/queries');
+const { insertAllInDatabase } = require('../db/queries');
 const generateCombinations = require('../utils/combinationGenerator');
 
 exports.generate = async (req, res) => {
@@ -17,7 +17,7 @@ exports.generate = async (req, res) => {
     const combinations = generateCombinations(transformedItems, length);
 
     // Insert items, combinations, and response in a single transaction
-    await insertItemsAndCombinationsAndResponse(transformedItems, combinations);
+    await insertAllInDatabase(transformedItems, combinations);
 
     // Return response
     res.status(201).json({

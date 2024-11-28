@@ -1,6 +1,6 @@
 const pool = require('./connection');
 
-async function insertItemsAndCombinationsAndResponse(items, combinations) {
+async function insertAllInDatabase(items, combinations) {
   const connection = await pool.getConnection();
 
   try {
@@ -33,5 +33,5 @@ async function insertItemsAndCombinationsAndResponse(items, combinations) {
 }
 
 module.exports = {
-  insertItemsAndCombinationsAndResponse,
+  insertAllInDatabase,
 };
