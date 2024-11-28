@@ -11,17 +11,20 @@ This project is a Node.js API using MySQL that generates valid combinations of i
 ## Installation
 
 1. Clone the repository:
-   git clone <your-repo-url>
-   cd backend-task-skillex
-
+   ```
+   git clone git@github.com:MherTumanyan/combination-generator-api.git
+   cd combination-generator-api
+   ```
 2. Install dependencies:
+   ```
    npm install
-
-3. Set up environment variables by creating a `.env` file:
+   ```
+3. Set up environment variables by creating a `.env` file(or copy .env.example):
+   ```
    touch .env
-
+   ```
    Add the following variables:
-
+   ```
    DB_HOST=localhost
    DB_USER=<your_db_user>
    DB_PASS=<your_db_password>
@@ -29,13 +32,15 @@ This project is a Node.js API using MySQL that generates valid combinations of i
    PORT=3000
 
 4. Run the MySQL database schema setup:
+   ```
    mysql -u <username> -p < schema.sql
-
+   ```
 ## Running the Project
 
 1. Start the server:
+   ```
    npm start
-
+   ```
 2. Use Postman or any API testing tool to make a POST request to:
    POST http://localhost:3000/api/generate
 
@@ -45,7 +50,7 @@ This project is a Node.js API using MySQL that generates valid combinations of i
      "items": ["A1", "B1", "C1", "A2"],
      "length": 2
    }
-
+   ```
 ## Project Structure
 ```
 combination-generator-api
